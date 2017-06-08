@@ -1,0 +1,24 @@
+<!--<ul>
+    <li *ngFor="let person of employees">{{person.Name}}</li>
+</ul>-->
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>ID:</td>
+            <td>Name:</td>
+            <td>Age:</td>
+            <td>CreatedAt:</td>
+            <td>Status:</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let info of employees">
+            <td>{{info.id}}</td>
+            <td>{{info.name}}</td>
+            <td>{{info.age}}</td>
+            <td>{{info.createdAt | date}}</td>
+            <td>{{info.status}}</td>
+        </tr>
+    </tbody>
+</table>

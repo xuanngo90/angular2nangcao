@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test api</title>
+</head>
+<body>
+	<ul class="result"></ul>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$.get( "https://59350831e904c400111bbe22.mockapi.io/api/v1/peoples", function( peoples ) {
+			console.log(peoples[0]);
+		    alert( "Load was performed." );
+		    for (var i = 0; i < peoples.length; i++) {
+		    	$('.result').append("<li>ID:"+peoples[i].id+" - Name:"+peoples[i].name+"</li>")
+		    }
+		});	
+	</script>
+</body>
+</html>
