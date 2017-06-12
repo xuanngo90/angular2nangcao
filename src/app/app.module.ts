@@ -8,8 +8,7 @@ import { EmployeListComponent } from './employe.component';
 import { HomeComponent } from './pages/home.component';
 
 import {appRoutes} from './app.routes';
-
-
+import {NotFoundComponent} from './notfound.component';
 
 @NgModule({
   imports: [
@@ -21,7 +20,8 @@ import {appRoutes} from './app.routes';
   declarations: [
     AppComponent,
     EmployeListComponent,
-    HomeComponent
+    HomeComponent,
+    NotFoundComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
