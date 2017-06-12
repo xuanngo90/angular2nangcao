@@ -5,7 +5,9 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { EmployeListComponent } from './employe.component';
+import { HomeComponent } from './pages/home.component';
 
+import {appRoutes} from './app.routes';
 
 
 
@@ -13,11 +15,13 @@ import { EmployeListComponent } from './employe.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    appRoutes
   ],
   declarations: [
     AppComponent,
-    EmployeListComponent
+    EmployeListComponent,
+    HomeComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

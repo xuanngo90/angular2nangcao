@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class EmployeeService {
     private apiUrl = "http://5854d76c1167031200ab4230.mockapi.io/api/employees";
+    // private apiUrl = "http://127.0.0.1:27017/db_app";
 
     constructor(private _http: Http) {
 
@@ -22,11 +23,11 @@ export class EmployeeService {
         // return employees;
         return this._http.get(this.apiUrl).map((response: Response) => response.json());
 
-        /*  <_http.get>
-            Get: Lấy
-            Post: Thêm
-            Put: Sửa
-            Delete: xóa
+        /*  
+            <_http.get> Get: Lấy
+            <_http.post> Post: Thêm
+            <_http.put> Put: Sửa
+            <_http.delete> Delete: xóa
          */
     }
 }
