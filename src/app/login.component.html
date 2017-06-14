@@ -1,0 +1,20 @@
+<form class="form-horizonal text-left" #f="ngForm" (ngSubmit)="CheckLogin(f.value)">
+    <div class="form-group">
+        <label>Username</label>
+        <div>
+            <input type="text" name="username" class="form-control" ngModel />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <div>
+            <input type="password" password="password" name="password" class="form-control" ngModel />
+        </div>
+    </div>
+    <div class="form-group">
+
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </div>
+</form>

@@ -13,6 +13,13 @@ import { EmployeeDetailComponent } from './employee-detail.component';
 import { EmployeeProjectComponent } from './employee-project.component';
 import { EmployeeOverviewComponent } from './employee-overview.component';
 
+import { EmployeeService } from './service/employe.service';
+
+import {LoginService} from './service/login.service';
+import { LoginComponent } from './login.component';
+import { CheckLoginGuard } from './guards/check-login.guard';
+import { CheckSaveFormGuard } from './guards/check-save-form.guard';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -27,9 +34,15 @@ import { EmployeeOverviewComponent } from './employee-overview.component';
     NotFoundComponent,
     EmployeeDetailComponent,
     EmployeeProjectComponent,
-    EmployeeOverviewComponent
+    EmployeeOverviewComponent,
+    LoginComponent,
   ],
-  providers: [],
+  providers: [
+    EmployeeService,
+    LoginService,
+    CheckLoginGuard,
+    CheckSaveFormGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
