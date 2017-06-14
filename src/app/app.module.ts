@@ -7,8 +7,11 @@ import { AppComponent } from './app.component';
 import { EmployeListComponent } from './employe.component';
 import { HomeComponent } from './pages/home.component';
 
-import {appRoutes} from './app.routes';
-import {NotFoundComponent} from './notfound.component';
+import { appRoutes } from './app.routes';
+import { NotFoundComponent } from './notfound.component';
+import { EmployeeDetailComponent } from './employee-detail.component';
+import { EmployeeProjectComponent } from './employee-project.component';
+import { EmployeeOverviewComponent } from './employee-overview.component';
 
 @NgModule({
   imports: [
@@ -21,7 +24,10 @@ import {NotFoundComponent} from './notfound.component';
     AppComponent,
     EmployeListComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    EmployeeDetailComponent,
+    EmployeeProjectComponent,
+    EmployeeOverviewComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

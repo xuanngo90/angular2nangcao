@@ -1,6 +1,7 @@
 <!--<ul>
     <li *ngFor="let person of employees">{{person.Name}}</li>
 </ul>-->
+<h3>Employeee List</h3>
 
 <table class="table table-condensed table-striped table-bordered text-left">
     <thead>
@@ -10,15 +11,17 @@
             <th>Age:</th>
             <th>CreatedAt:</th>
             <th>Status:</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let info of employees">
-            <td>{{info.id}}</td>
-            <td>{{info.name}}</td>
-            <td>{{info.age}}</td>
-            <td>{{info.createdAt | date}}</td>
-            <td>{{info.status}}</td>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.createdAt | date}}</td>
+            <td>{{employee.status}}</td>
+            <td><a [routerLink]="['/employee-detail', employee.id]">Show detail</a></td>
         </tr>
     </tbody>
 </table>

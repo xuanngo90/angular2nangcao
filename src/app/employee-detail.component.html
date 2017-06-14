@@ -1,0 +1,25 @@
+<h3>Child employees</h3>
+
+<table class="table table-condensed table-striped table-bordered text-left" *ngIf="employee">
+    <tr>
+        <td>Id</td>
+        <td>{{employee.id}}</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{employee.name}}</td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td>{{employee.age}}</td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td>{{employee.status}}</td>
+    </tr>
+</table>
+<a class="btn btn-primary" [routerLink]="['overview']">Overview</a>
+<a class="btn btn-primary" [routerLink]="['project']">Project</a>
+<a class="btn btn-default" [routerLink]="['/employees']">Go back</a>
+
+<router-outlet></router-outlet>
